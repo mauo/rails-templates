@@ -12,8 +12,6 @@ plugin 'rspec-rails',
   :git => 'git://github.com/dchelimsky/rspec-rails.git'
 plugin 'exception_notifier', 
   :git => 'git://github.com/rails/exception_notification.git'
-plugin 'open_id_authentication', 
-  :git => 'git://github.com/rails/open_id_authentication.git'
 plugin 'asset_packager', 
   :git => 'http://synthesis.sbecker.net/pages/asset_packager'
 plugin 'role_requirement', 
@@ -23,10 +21,11 @@ plugin 'restful-authentication',
  
 gem 'mislav-will_paginate', :version => '~> 2.2.3', 
   :lib => 'will_paginate',  :source => 'http://gems.github.com'
-gem 'rubyist-aasm'
-gem 'ruby-openid'
  
 rake("gems:install", :sudo => true)
 
 generate("authenticated", "user session")
 generate("rspec")
+
+
+puts "all done."
